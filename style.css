@@ -6,9 +6,17 @@ body {
     margin: 0;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-  }
-  
-  .card {
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Para limitar a largura dos cards em tela grande */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+.card {
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -17,15 +25,34 @@ body {
     background-color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     background-color: #f0f0f0;
-  }
-  
-  .answer {
+}
+
+.answer {
     display: none;
     margin-top: 8px;
     font-weight: bold;
-  }
-  
+    color:red;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        justify-content: center; /* Centraliza os cards em telas médias */
+    }
+}
+
+/* Media query para tela pequena */
+@media screen and (max-width: 576px) {
+    .card-container {
+        flex-direction: column; /* Coloca os cards em uma única coluna */
+        align-items: center; /* Centraliza os cards verticalmente */
+    }
+
+    .card {
+        width: 100%; /* Cards ocupam a largura total da tela */
+        margin: 8px 0; /* Espaçamento entre os cards */
+    }
+}
