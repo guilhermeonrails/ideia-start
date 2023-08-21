@@ -1,28 +1,36 @@
+:root {
+    --cor-do-fundo: #F2F7FF;
+    --cor-do-texto: #0B409C;
+    --cor-hover: #FFF7D4;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: var(--cor-do-fundo);
     font-family: Arial, sans-serif;
+    color: var(--cor-do-texto);
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px; /* Para limitar a largura dos cards em tela grande */
-    margin: 0 auto; /* Centraliza o container na página */
+    justify-content: space-around;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    background-color: #fff;
+    width: 18.75rem;
+    height: 12.5rem;
+    border: 0.0625rem solid var(--cor-do-texto);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--cor-do-fundo);
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -32,58 +40,49 @@ body {
 }
 
 .card:hover {
-    background-color: #f0f0f0;
+    background-color: var(--cor-hover);
 }
 
-.answer {
+.resposta {
     display: none;
-    margin-top: 8px;
-    font-weight: bold;
-    color:rgb(76, 0, 255);
+    margin-top: 1rem;
+    font-weight:600;
 }
 
 footer {
-    background-color: #fff;
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1); /* Sombra para separar o footer do conteúdo */
+    background-color: var(--cor-do-fundo);
+    box-shadow: 0px -0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1; /* Coloca o footer acima do conteúdo */
+    z-index: 1;
+    padding: 1rem 0;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
-    padding: 16px 0;
 }
 
 .footer-links a {
-    margin: 0 20px;
+    margin: 0 1.25rem;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #666;
+    color: var(--cor-hover);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 36rem) {
     .card-container {
-        justify-content: center; /* Centraliza os cards em telas médias */
-    }
-}
-
-/* Media query para tela pequena */
-@media screen and (max-width: 576px) {
-    .card-container {
-        flex-direction: column; /* Coloca os cards em uma única coluna */
-        align-items: center; /* Centraliza os cards verticalmente */
+        flex-direction: column;
+        align-items: center;
     }
 
     .card {
-        width: 100%; /* Cards ocupam a largura total da tela */
-        margin: 8px 0; /* Espaçamento entre os cards */
+        width: 100%;
+        margin: 0.5rem 0;
     }
 }
