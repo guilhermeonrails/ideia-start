@@ -27,6 +27,10 @@ body {
     transition: background-color 0.3s;
 }
 
+.card h2 {
+    margin-bottom: 1rem;
+}
+
 .card:hover {
     background-color: #f0f0f0;
 }
@@ -35,7 +39,7 @@ body {
     display: none;
     margin-top: 8px;
     font-weight: bold;
-    color:red;
+    color:rgb(76, 0, 255);
 }
 
 @media screen and (max-width: 768px) {
