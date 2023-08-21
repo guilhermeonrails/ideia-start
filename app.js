@@ -19,5 +19,3 @@ function criarCard(titulo, pergunta, resposta) {
 
   cardContainer.appendChild(card);
 }
-
-// Adicione mais cards chamando a função criarCard com diferentes perguntas e respostas
