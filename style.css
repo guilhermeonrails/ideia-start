@@ -1,61 +1,75 @@
 :root {
-    --cor-do-fundo: #F2F7FF;
-    --cor-do-texto: #0B409C;
-    --cor-hover: #FFF7D4;
+    --background-color: #FAF1E4;
+    --text-color: black;
+    --card-front-color: #CEDEBD;
+    --card-back-color: #9EB384;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
-    background-color: var(--cor-do-fundo);
     font-family: Arial, sans-serif;
-    color: var(--cor-do-texto);
+    background-color: var(--background-color);
 }
 
-.card-container {
+#container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 75rem;
-    margin: 0 auto;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1rem;
+    margin: auto 2rem;
 }
 
 .card {
-    width: 18.75rem;
-    height: 12.5rem;
-    border: 0.0625rem solid var(--cor-do-texto);
-    border-radius: 0.5rem;
-    padding: 1rem;
     margin: 1rem;
-    background-color: var(--cor-do-fundo);
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    flex: 1 0 calc(33% - 6rem);
+    height: 20rem;
 }
 
-.card h2 {
-    margin-bottom: 1rem;
+.card__content {
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease-in-out;
+    background-color: var(--card-front-color);
+    height: 100%;
 }
 
-.card:hover {
-    background-color: var(--cor-hover);
+.card__content__front,
+.card__content__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    backface-visibility: hidden;
 }
 
-.resposta {
-    display: none;
-    margin-top: 1rem;
-    font-weight:600;
+.card__content__front p {
+    font-size: 2rem;
 }
 
+.card__content__back {
+    background-color: var(--card-back-color);
+    transform: rotateY(180deg);
+}
+
+.card__content p {
+    padding: 3rem;
+    color: var(--text-color);
+}
+
+.card.active .card__content {
+    transform: rotateY(180deg);
+}
+
+/* Footer */
 footer {
-    background-color: var(--cor-do-fundo);
+    background-color: var(--background-color);
     box-shadow: 0px -0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1;
     padding: 1rem 0;
 }
 
@@ -65,6 +79,7 @@ footer {
 }
 
 .footer-links a {
+    color: var(--text-color);
     margin: 0 1.25rem;
     text-decoration: none;
     font-weight: bold;
@@ -72,17 +87,5 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--cor-hover);
-}
-
-@media screen and (max-width: 36rem) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
+    color: green;
 }
