@@ -1,8 +1,8 @@
 :root {
-    --background-color: #FAF1E4;
-    --text-color: black;
-    --card-front-color: #CEDEBD;
-    --card-back-color: #9EB384;
+    --background-color: #979AAD;
+    --text-color: #464D7A;
+    --card-front-color: #DBDFE1;
+    --card-back-color: #dbdfe169;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     gap: 3rem;
     padding: 1rem;
-    margin: auto 2rem;
+    margin: auto 1rem;
 }
 
 .card {
@@ -46,7 +46,7 @@ body {
 }
 
 .card__content__front p {
-    font-size: 2rem;
+    font-size: 1.6vw;
 }
 
 .card__content__back {
@@ -88,4 +88,22 @@ footer {
 
 .footer-links a:hover {
     color: green;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 0 calc(40% - 2rem);
+    }
+    .card__content p {
+        font-size: 3vw; /* Tamanho de fonte relativo à largura da tela */
+    }
+}
+
+@media (max-width: 560px) {
+    .card {
+        flex: 1 0 calc(100% - 2rem);
+    }
+    .card__content p {
+        font-size: 5vw; /* Tamanho de fonte relativo à largura da tela */
+    }
 }
