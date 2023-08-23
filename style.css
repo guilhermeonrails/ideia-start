@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Bai Jamjuree;
     background: url('img/bg-desktop.png');
 }
 
@@ -45,12 +45,12 @@ body {
     border-radius: 0.6rem;
     margin: 0.6rem;
     font-size: 1rem;
-    bac
 }
 
 .card__content p {
     margin-top: 1.5rem;
     padding: 3rem;
+    font-size: 1.8vw;
 }
 
 .card__content__front,
@@ -66,6 +66,19 @@ body {
 
 .card__content__front p {
     color: white;
+    font-family: Bai Jamjuree;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card__content__back p {
+    font-family: Bai Jamjuree;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .card__content__back {
@@ -114,7 +127,7 @@ footer {
         flex: 1 0 calc(40% - 2rem);
     }
     .card__content p {
-        font-size: 3vw; /* Tamanho de fonte relativo à largura da tela */
+        font-size: 2.5vw; /* Tamanho de fonte relativo à largura da tela */
     }
 }
 
@@ -127,6 +140,6 @@ footer {
         flex: 1 0 calc(100% - 2rem);
     }
     .card__content p {
-        font-size: 5vw; /* Tamanho de fonte relativo à largura da tela */
+        font-size: 4.5vw; /* Tamanho de fonte relativo à largura da tela */
     }
 }
