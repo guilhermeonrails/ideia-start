@@ -8,8 +8,7 @@
 body {
     margin: 0;
     font-family: Bai Jamjuree;
-    background: url('img/bg-desktop.png') center center fixed;
-    background-size: cover;
+    background: url('img/bg-desktop.png');
 }
 
 #container {
@@ -103,20 +102,20 @@ footer p {
 
 @media (max-width: 1024px) {
     body {
-        background: url('img/bg-tablet.png');
+        background: url('img/bg-tablet.png'), no-repeat cover;
     }
     .card {
         flex: 1 0 calc(40% - 2rem);
     }
     .card__content p {
-        font-size: 2.5vw; /* Tamanho de fonte relativo à largura da tela */
+        font-size: 2.2vw; /* Tamanho de fonte relativo à largura da tela */
     }
 }
 
 @media (max-width: 560px) {
 
     body {
-        background: url('img/bg-mobile.png');
+        background: url('img/bg-mobile.png'), no-repeat cover;
     }
     .card {
         flex: 1 0 calc(100% - 2rem);
