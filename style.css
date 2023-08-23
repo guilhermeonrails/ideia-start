@@ -1,14 +1,14 @@
 :root {
-    --background-color: #979AAD;
-    --text-color: #464D7A;
-    --card-front-color: #DBDFE1;
-    --card-back-color: #dbdfe169;
+    /* --background: #979AAD; */
+    --text-color: #DBE4EF;
+    --card-front-color: #144480;
+    --card-back-color: #00F4BF;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    background: url('img/bg-desktop.png');
 }
 
 #container {
@@ -36,27 +36,43 @@ body {
     height: 100%;
 }
 
+.card h2 {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    border-radius: 0.6rem;
+    margin: 0.6rem;
+    font-size: 1rem;
+    bac
+}
+
+.card__content p {
+    margin-top: 1.5rem;
+    padding: 3rem;
+}
+
 .card__content__front,
 .card__content__back {
+    font-size: 1.6vw;
     position: absolute;
     width: 100%;
     height: 100%;
     font-size: 1.5rem;
     backface-visibility: hidden;
+    box-sizing: border-box;
 }
 
 .card__content__front p {
-    font-size: 1.6vw;
+    color: white;
 }
 
 .card__content__back {
-    background-color: var(--card-back-color);
+    color: #00F4BF;
+    background-color: rgba(0, 244, 191, 0.2); 
+    border: 4px solid var(--card-back-color);
     transform: rotateY(180deg);
-}
-
-.card__content p {
-    padding: 3rem;
-    color: var(--text-color);
 }
 
 .card.active .card__content {
@@ -91,6 +107,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    body {
+        background: url('img/bg-tablet.png');
+    }
     .card {
         flex: 1 0 calc(40% - 2rem);
     }
@@ -100,6 +119,10 @@ footer {
 }
 
 @media (max-width: 560px) {
+
+    body {
+        background: url('img/bg-mobile.png');
+    }
     .card {
         flex: 1 0 calc(100% - 2rem);
     }

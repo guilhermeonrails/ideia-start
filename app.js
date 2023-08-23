@@ -1,4 +1,4 @@
-function criarCard(pergunta, resposta) {
+function criarCard(titulo, pergunta, resposta) {
   const cardContainer = document.getElementById("container");
 
   const card = document.createElement("div");
@@ -6,6 +6,7 @@ function criarCard(pergunta, resposta) {
 
   card.innerHTML = `
     <div class="card__content">
+    <h2>${titulo}</h2>
       <div class="card__content__front">
         <p>${pergunta}</p>
       </div>
