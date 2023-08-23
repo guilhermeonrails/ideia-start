@@ -106,10 +106,16 @@ footer p {
         background: url('img/bg-tablet.png'), no-repeat cover;
     }
     .card {
-        flex: 1 0 calc(40% - 2rem);
+        flex: 1 0 calc(30% - 2rem);
     }
     .card__content p {
         font-size: 2.2vw; /* Tamanho de fonte relativo à largura da tela */
+    }
+
+    .card__content__back p {
+        font-weight: 700;
+        margin-top: auto;
+       
     }
 }
 
@@ -119,9 +125,10 @@ footer p {
         background: url('img/bg-mobile.png'), no-repeat cover;
     }
     .card {
-        flex: 1 0 calc(100% - 2rem);
+        flex: 1 0 calc(100% - 1rem);
     }
+
     .card__content p {
-        font-size: 4vw; /* Tamanho de fonte relativo à largura da tela */
+        font-size: 3.8vw; /* Tamanho de fonte relativo à largura da tela */
     }
 }
