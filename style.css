@@ -8,7 +8,8 @@
 body {
     margin: 0;
     font-family: Bai Jamjuree;
-    background: url('img/bg-desktop.png');
+    background: url('img/bg-desktop.png') center center fixed;
+    background-size: cover;
 }
 
 #container {
@@ -16,16 +17,18 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 3rem;
-    padding: 1rem;
+    padding: 4rem;
     margin: auto 1rem;
 }
 
 .card {
-    margin: 1rem;
+    margin: 1rem 1rem;
     border-radius: 0.5rem;
     overflow: hidden;
     flex: 1 0 calc(33% - 6rem);
     height: 20rem;
+    line-height: normal;
+    font-style: normal;
 }
 
 .card__content {
@@ -50,35 +53,26 @@ body {
 .card__content p {
     margin-top: 1.5rem;
     padding: 3rem;
-    font-size: 1.8vw;
+    font-size: 1.4vw;
+    font-family: Bai Jamjuree;
 }
 
 .card__content__front,
 .card__content__back {
-    font-size: 1.6vw;
     position: absolute;
     width: 100%;
     height: 100%;
-    font-size: 1.5rem;
     backface-visibility: hidden;
     box-sizing: border-box;
 }
 
 .card__content__front p {
     color: white;
-    font-family: Bai Jamjuree;
-    font-size: 18px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .card__content__back p {
-    font-family: Bai Jamjuree;
-    font-size: 18px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
 .card__content__back {
@@ -94,29 +88,17 @@ body {
 
 /* Footer */
 footer {
-    background-color: var(--background-color);
-    box-shadow: 0px -0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    background-color: #01080E;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-}
-
-.footer-links a {
+footer p {
+    text-align: center;
     color: var(--text-color);
-    margin: 0 1.25rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: green;
+    margin: 0 2rem;
 }
 
 @media (max-width: 1024px) {
