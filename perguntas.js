@@ -38,7 +38,6 @@ criarCard(
     "Uma variável em JavaScript pode ser declarada usando 'var', 'let' ou 'const', seguido pelo nome da variável."
 );
 
-// ... (outros cartões de JavaScript)
 
 criarCard(
     "Geografia",
@@ -52,4 +51,3 @@ criarCard(
     "Tempo refere-se às condições atmosféricas em um curto período, enquanto clima se refere ao padrão de condições atmosféricas em uma região ao longo do tempo."
 );
 
-// ... (outros cartões de geografia)

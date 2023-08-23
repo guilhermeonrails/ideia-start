@@ -122,6 +122,6 @@ footer p {
         flex: 1 0 calc(100% - 2rem);
     }
     .card__content p {
-        font-size: 4.5vw; /* Tamanho de fonte relativo à largura da tela */
+        font-size: 4vw; /* Tamanho de fonte relativo à largura da tela */
     }
 }
